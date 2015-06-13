@@ -27,5 +27,5 @@ sim.test.abcc=1234
 无法获取[development]和[simulator] 下的配置
 
 但我们可以通过 Yaf_Config_Ini('ini file' , 'section name');来获取相应的配置值
-
 另外冒号":"含义表示 继承，比如上面 获取simulator 配置的时候，可以拿到product下的配置
+若section name不填写 返回全部配置,继承的会在子配置中体现
