@@ -1,12 +1,37 @@
 <?php
-class Bootstrap extends Yaf_Bootstrap_Abstract 
+/**
+ * Yaf Bootstrap
+ *
+ * @author zaifeng <zhzaifeng@sina.com>
+ */
+class Bootstrap extends Yaf\Bootstrap_Abstract 
 {
-    private $_config ;
+    /**
+     * [_initCommon description]
+     * @return [type] [description]
+     */
+    public function _initCommon()
+    {
+        Yaf\Loader::import(APP_PATH.'/common/functions.php');
+    }
+
+    /**
+     * register configure to global
+     * @return [type] [description]
+     */
     public function _initConfig()
     {
-        //$this->_config = Yaf_Application::app()->getConfig();
-        //Yaf_Registry::set('config' , $this->_config);
+        Yaf\Registry::set('config' , Yaf\Application::app()->getConfig()) ;
     }
     
+    /**
+     * init local name space
+     * @return null
+     */
+    public function _initLoader()
+    {
+        Yaf\Loader::getInstance()->registerLocalNamespace( array("Db") ) ;
+    }
+
 }
 
