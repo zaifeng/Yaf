@@ -2,17 +2,16 @@
 /**
  *
  */
-class Controller_Base extends Yaf_Controller_Abstract
+class MyController extends Yaf_Controller_Abstract
 {
     protected $layout ;
-    public function init()
-    {
-        
-    }
-
     /**
      * Render a php template
      */
+    public function init()
+    {
+        $this->_req = $this->getRequest();
+    }
     public function render()
     {
         
