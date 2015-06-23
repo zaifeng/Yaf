@@ -1,7 +1,7 @@
 <?php
-class TestController extends Yaf_Controller_Abstract {
+class TestController extends AppController {
     public function indexAction() {//默认Action
-        echo "test";
+        $this->_view->test = "Hello world";
     }
 }
 ?>

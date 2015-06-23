@@ -12,9 +12,9 @@ class ErrorController extends Yaf_Controller_Abstract
      * 
      */
     public function errorAction($exception){
-        $this->getView()->assign("file", $exception->getFile());
+        $this->getView()->assign("file", basename($exception->getFile()));
         $this->getView()->assign("line", $exception->getLine());
         $this->getView()->assign("code", $exception->getCode());
-        $this->getView()->assign("message", $exception->getMessage());
+        //$this->getView()->assign("message", $exception->getMessage());
     }
 }
