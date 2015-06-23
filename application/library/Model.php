@@ -24,7 +24,7 @@ class Model
         if(is_string($config) || empty($config)) {
             //如果是字符串从配置文件读取
             if(empty($config)) $config = 'default';
-            $config = Yaf\Registry::get('config')->database->$config->toArray();
+            $config = Yaf_Registry::get('config')->database->$config->toArray();
         }
         //获取表前缀
         $this->prefix = $prefix = isset($config['prefix']) ? $config['prefix'] : '';
@@ -74,7 +74,7 @@ class Model
      */
     public function add($array){
         if(!is_array($array)){
-            new Yaf\Exception("数据类型不对");
+            new Yaf_Exception("数据类型不对");
         }
         return $this->db->insert($array);
     }
@@ -85,7 +85,7 @@ class Model
      */
     public function update($array){
         if(!is_array($array)){
-            new Yaf\Exception("数据类型不对");
+            new Yaf_Exception("数据类型不对");
         }
         return $this->db->update($array);
     }

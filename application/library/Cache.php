@@ -12,7 +12,7 @@ class Cache{
      */
     static public function getInstance(){
         if(self::$instance == null){
-            $cache_type = Yaf\Registry::get('config')->application->default->cache;
+            $cache_type = Yaf_Registry::get('config')->application->default->cache;
             $class = "Cache_".$cache_type;
             if(class_exists($class)){
                 self::$instance = new $class();

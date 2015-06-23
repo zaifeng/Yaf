@@ -4,7 +4,7 @@
  *
  * @author zaifeng <zhzaifeng@sina.com>
  */
-class Bootstrap extends Yaf\Bootstrap_Abstract 
+class Bootstrap extends Yaf_Bootstrap_Abstract 
 {
     /**
      * [_initCommon description]
@@ -12,7 +12,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
      */
     public function _initCommon()
     {
-        Yaf\Loader::import(APP_PATH.'/common/functions.php');
+        Yaf_Loader::import(APP_PATH.'/common/functions.php');
     }
 
     /**
@@ -21,7 +21,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
      */
     public function _initConfig()
     {
-        Yaf\Registry::set('config' , Yaf\Application::app()->getConfig()) ;
+        Yaf_Registry::set('config' , Yaf_Application::app()->getConfig()) ;
     }
     
     /**
@@ -30,7 +30,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
      */
     public function _initLoader()
     {
-        Yaf\Loader::getInstance()->registerLocalNamespace( array("Db") ) ;
+        Yaf_Loader::getInstance()->registerLocalNamespace( array("Db") ) ;
     }
 
 }

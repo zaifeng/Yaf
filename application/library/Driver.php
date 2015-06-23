@@ -70,7 +70,7 @@ abstract class Driver{
         } elseif (is_float($value)) {
             return sprintf('%F', $value);
         }
-        return "'" . addcslashes($value, "\000\n\r\\'\"\032") . "'";
+        return "'" . addcslashes($value, "_000_n_r__'_"_032") . "'";
     }
     
 }
