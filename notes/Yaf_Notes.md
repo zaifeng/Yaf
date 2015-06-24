@@ -59,12 +59,13 @@ application.dispatcher.catchException   Bool    False   是否使用默认的异
     <tr>
         <td>yaf.use_namespace</td>
         <td>0</td>   
-        <td>PHP_INI_SYSTEM</td>  <td>开启的情况下, Yaf将会使用命名空间方式注册自己的类, 比如Yaf_Application将会变成Yaf\Application</td>
+        <td>PHP_INI_SYSTEM</td>  
+        <td>开启的情况下, Yaf将会使用命名空间方式注册自己的类, 比如Yaf_Application将会变成Yaf\Application</td>
     </tr>
     <tr>
         <td>yaf.use_spl_autoload</td>    
         <td>0</td>   
-        <td>PHP_INI_ALL<td> 
-        <td>开启的情况下, Yaf在加载不成功的情况下, 会继续让PHP的自动加载函数加载, 从性能考虑, 除非特殊情况, 否则保持这个选项关闭<td>
+        <td>PHP_INI_ALL</td> 
+        <td>开启的情况下, Yaf在加载不成功的情况下, 会继续让PHP的自动加载函数加载, 从性能考虑, 除非特殊情况, 否则保持这个选项关闭</td>
     </tr>
 </table>
