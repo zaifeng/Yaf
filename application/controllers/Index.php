@@ -18,11 +18,20 @@ class IndexController extends Yaf_Controller_Abstract{
     
     public function testAction()
     {
-        $memcache = memcache_connect('127.0.0.1',11211);
-        $memcache->increment('qq',2);
-
-        $key = $memcache->get('qq');
-        var_dump($key);
+        $memcache = new Memcache ;
+        $memcache->addServer('127.0.0.1',11211);
+        $memcache->addServer('127.0.0.1',11212);
+        $qq = $memcache->get('qq');
+        if (empty($qq)){
+            $memcache->set('qq' , 2 ,0 , 1800) ;
+        } else {
+            //$memcache->increment('qq');
+        }
+        $memcache->set('qq' , 2 ,0 , 1800) ;
+        $memcache->increment('qq',3);
+        $qq = $memcache->get('qq');
+        
+        var_dump($qq);
         Yaf_Dispatcher::getInstance()->disableView();
     }
 }
