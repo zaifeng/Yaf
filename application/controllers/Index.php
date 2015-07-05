@@ -18,6 +18,8 @@ class IndexController extends Yaf_Controller_Abstract{
     
     public function testAction()
     {
+        echo 'test';
+        /*
         $memcache = new Memcache ;
         $memcache->addServer('127.0.0.1',11211);
         $memcache->addServer('127.0.0.1',11212);
@@ -32,6 +34,9 @@ class IndexController extends Yaf_Controller_Abstract{
         $qq = $memcache->get('qq');
         
         var_dump($qq);
+        */
+        //$arrConfig = Yaf_Application::app()->getConfig();
+        //var_dump($arrConfig);
         Yaf_Dispatcher::getInstance()->disableView();
     }
 }
