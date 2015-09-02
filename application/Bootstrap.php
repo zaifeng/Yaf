@@ -33,5 +33,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
         Yaf_Loader::getInstance()->registerLocalNamespace( array("Db") ) ;
     }
 
+    public function _initRoute(Yaf_Dispatcher $dispatcher)
+    {
+        $router = $dispatcher->getInstance()->getRouter();
+        $route = new Yaf_Route_Rewrite('/sh/:code',array('module'=>'My','controller' => 'Index','action' => 'Index'));
+        $router->addRoute('share', $route);
+    } 
 }
 
