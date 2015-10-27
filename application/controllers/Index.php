@@ -2,18 +2,22 @@
 /**
  * Main Controller
  */
-class IndexController extends Yaf_Controller_Abstract{
+class IndexController extends Yaf_Controller_Abstract
+{
+    public function init()
+    {
+        Yaf_Dispatcher::getInstance()->disableView();    
+    }
     
     public function indexAction()
     {
-        
         $this->_view->content = "Hello Yaf" ;       
+        echo "Hello Yaf";
     }
 
     public function showAction()
     {
         echo "Hello World!!!" ;
-        Yaf_Dispatcher::getInstance()->disableView();
     }
     
     public function testAction()
@@ -37,7 +41,6 @@ class IndexController extends Yaf_Controller_Abstract{
         */
         //$arrConfig = Yaf_Application::app()->getConfig();
         //var_dump($arrConfig);
-        Yaf_Dispatcher::getInstance()->disableView();
     }
 }
 ?>
