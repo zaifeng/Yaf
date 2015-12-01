@@ -4,7 +4,7 @@
 
 框架总是抛出500 错误 
 
-####“PHP message: PHP Fatal error:  Uncaught exception 'Yaf\Exception\LoadFailed\Controller' with message 'Failed opening controller script”
+#### PHP message: PHP Fatal error:  Uncaught exception 'Yaf\Exception\LoadFailed\Controller' with message 'Failed opening controller script'
 
 解决方案，在配置文件中加入下面两行：
 
