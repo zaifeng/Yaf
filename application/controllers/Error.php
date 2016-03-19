@@ -15,6 +15,6 @@ class ErrorController extends Yaf_Controller_Abstract
         $this->getView()->assign("file", basename($exception->getFile()));
         $this->getView()->assign("line", $exception->getLine());
         $this->getView()->assign("code", $exception->getCode());
-        //$this->getView()->assign("message", $exception->getMessage());
+        $this->getView()->assign("message", $exception->getMessage());
     }
 }
